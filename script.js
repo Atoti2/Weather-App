@@ -7,7 +7,7 @@ const getWeather = async () => {
     try{
             const input = document.querySelector('input').value
             if(input){
-                const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${input}`, {mode: "cors"})
+                const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${input}`, {mode: "cors"})
                 if(!response.ok){
                     throw new Error()
                 }
