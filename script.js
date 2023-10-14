@@ -1,7 +1,7 @@
 const button = document.querySelector('button')
 const err = document.querySelector('.error')
-const main = document.querySelector('.cityData')
 const loading = document.querySelector('.load')
+
 const getWeather = async () => {
     const apiKey = "c60a00d53f5c446bb43162007231310"
     try{
@@ -12,15 +12,16 @@ const getWeather = async () => {
                     throw new Error()
                 }
                 const data = await response.json() 
+
                 if(!data){
                     loading.innerHTML = "Loading..."
                 }
+
                 if(data){
                     loadData(data)
                     err.innerHTML = ""
                     loading.innerHTML = ""
                 }
-              
             }
         }catch(error){
             err.innerHTML = "No location found."
@@ -36,6 +37,7 @@ function loadData(data){
     const humid = document.querySelector('.humid')
     const title = document.querySelector('.title')
 
+    //Weather datas
     const condition = data.current.condition.text
     const feelslike_c = data.current.feelslike_c
     const temp_c = data.current.temp_c
@@ -43,6 +45,7 @@ function loadData(data){
     const icon = data.current.condition.icon
     const city = data.location.name
 
+    //Displaying the data
     image.src = "http:" + icon
     title.textContent = city
     cond.innerHTML = `Condition: ${condition}`
