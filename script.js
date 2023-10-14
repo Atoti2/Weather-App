@@ -3,10 +3,11 @@ const err = document.querySelector('.error')
 const main = document.querySelector('.cityData')
 const loading = document.querySelector('.load')
 const getWeather = async () => {
+    const apiKey = "c60a00d53f5c446bb43162007231310"
     try{
             const input = document.querySelector('input').value
             if(input){
-                const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=c60a00d53f5c446bb43162007231310&q=${input}`)
+                const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${input}`, {mode: "cors"})
                 if(!response.ok){
                     throw new Error()
                 }
