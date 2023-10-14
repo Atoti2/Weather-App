@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #202C39;
+    padding: 12px;
+}
+
+input{
+    padding: 10px;
+    font-size: 1.1rem;
+    background-color: #F2D492;
+    border: none;
+    color: black;
+    border-radius: 10px;
+}
+
+button{
+    background-color: #F29559;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    transition-duration: 200ms;
+}
+
+button:hover{
+    transform: scale(1.03);
+}
+
+.error{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: serif;
+}
+
+main{
+    display: flex;
+    background-color: #6874E8;
+    height: calc(100vh - 66px);
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.title{
+    font-size: 1.7rem;
+}
+
+.cityData{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 30px;
+    text-align: center;
+}
